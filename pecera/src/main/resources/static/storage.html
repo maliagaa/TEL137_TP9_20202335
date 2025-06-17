@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pregunta 2 – Web Storage API</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 20px;
+    }
+    #aquarium {
+      width: 400px;
+      height: 200px;
+      background-color: rgb(187, 222, 251);
+      border: 2px solid #88c;
+      position: relative;
+      margin-bottom: 1em;
+      transition: background-color 1s linear;
+    }
+    .control {
+      margin-right: 1em;
+    }
+  </style>
+</head>
+<body>
+<h1>Web Storage API: Nemo y Dory</h1>
+
+<div id="aquarium"></div>
+
+<div>
+  <button id="btnNemo" class="control">Nemo vio un pez</button>
+  <span>Contador Nemo: <strong id="countNemo">0</strong></span>
+</div>
+<div>
+  <button id="btnDory" class="control">Dory vio un pez</button>
+  <span>Contador Dory: <strong id="countDory">0</strong></span>
+</div>
+<div style="margin-top:1em;">
+  <button id="btnClean">Limpiar pecera (reset color)</button>
+</div>
+
+<script src="js/storage.js"></script>
+</body>
+</html>
