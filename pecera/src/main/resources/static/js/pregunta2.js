@@ -4,13 +4,12 @@ const pasos        = 60;
 let pasoActual     = 0;
 let intervaloColor;
 
-const aq   = document.getElementById('aquarium');
+const aq   = document.getElementById('contenedorPregunta2');
 const nLbl = document.getElementById('countNemo');
 const dLbl = document.getElementById('countDory');
 const nBtn = document.getElementById('btnNemo');
 const dBtn = document.getElementById('btnDory');
 const cBtn = document.getElementById('btnClean');
-
 
 function cargarContadores() {
     const nemo = parseInt(localStorage.getItem('nemoCount')) || 0;
@@ -52,10 +51,10 @@ function limpiarPecera() {
 }
 
 window.addEventListener('DOMContentLoaded', () => {
+    // Reinicia solo Dory al cargar de nuevo
     sessionStorage.removeItem('doryCount');
 
     cargarContadores();
-
     intervaloColor = setInterval(actualizarColor, 1000);
 
     nBtn.addEventListener('click', guardarNemo);

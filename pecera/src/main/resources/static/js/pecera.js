@@ -1,5 +1,5 @@
 function crearPecera(x) {
-    const container = document.getElementById('peceraContainer');
+    const container = document.getElementById('contenedorPregunta1');
     container.innerHTML = '';
 
     const tabla = document.createElement('table');

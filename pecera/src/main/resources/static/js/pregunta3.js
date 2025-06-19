@@ -1,15 +1,13 @@
 let nemoCount = 0;
 let doryCount = 0;
 
-
-const aquarium   = document.getElementById('aquarium');
+const aquarium   = document.getElementById('pregunta3');
 const nemoArea   = document.getElementById('nemo-area');
 const doryArea   = document.getElementById('dory-area');
 const nemoLabel  = document.getElementById('countNemo');
 const doryLabel  = document.getElementById('countDory');
 
 let bubbleIdCounter = 0;
-
 
 [nemoArea, doryArea].forEach(area => {
     area.addEventListener('dragover', e => e.preventDefault());
@@ -37,7 +35,6 @@ function handleDropOnFish(e) {
     }
 }
 
-
 function spawnBubble(type) {
     const bubble = document.createElement('div');
     const id     = `bubble-${type}-${bubbleIdCounter++}`;
@@ -47,7 +44,7 @@ function spawnBubble(type) {
     bubble.dataset.fish   = type;
 
     const { width } = aquarium.getBoundingClientRect();
-    const size      = 30; // px
+    const size      = 30;
     const x         = Math.random() * (width - size);
     bubble.style.left = `${x}px`;
     bubble.style.top  = `0px`;
